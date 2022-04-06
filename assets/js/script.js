@@ -28,15 +28,14 @@ outputHtml(matches);
 // show results in html
 const outputHtml = matches => {
   if (matches.length > 0) {
-    const html = matches.map(match => '
+    const html = matches.map(match => `
     <div class="card card-body mb-1">
     <h2>${match.name}</h2>
-    </div>
-  ')
-  .join("");
+    </div>`
+    )}
+  // .join("");
   console.log(html);
  }
-}
 
 search.addeventListenter("input", () => searchBrewery(search.value));
 
