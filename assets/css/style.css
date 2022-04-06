@@ -1,0 +1,47 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: lightgray;
+    margin: 5px;
+}
+
+.nav-link{
+    color: black;
+    display: inline;
+}
+
+.nav-item:nth-child(even){
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.carouselSection{
+    margin: 5px;
+}
+
+#about-us{
+    text-align: center;
+    margin: 20px 5px;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.aboutUsP{
+    text-align: center;
+}
+
+.image-cards{
+    margin:0;
+    margin-left: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.img-fluid{
+    margin:3px;
+}
+
+.card{
+    margin: 20px;
+}

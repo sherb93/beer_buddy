@@ -1,5 +1,4 @@
 
-
 // Define Variables
 
 // const search = document.getElementsById("search")
