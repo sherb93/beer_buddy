@@ -1,48 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./assets/style.css">
-    <title>Map API</title>
-</head>
-<body>
-    <header>
-        <div>
-            <span class="navbar-brand mb-0 h1">Beer Buddy</span>
-        </div>
-        <nav>
-            <ul class="nav justify-content-end">
-                <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">About Us</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">Brewery Finder</a>
-                </li>
-                <li class="nav-item">
-                <a class="nav-link" href="#">My Profile</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <div class="container">
-            <div class="left-container">
-                <form>
-                    <label for="city"></label>
-                    
-                </form>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Beer Buddy Georgia</title>
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.jpeg">
+        <link rel="stylesheet" href="./assets/css/reset.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <header>
+            <div>
+                <span class="navbar-brand mb-0 h1">Beer Buddy</span>
             </div>
-        </div>
-    </main>
-
-
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
-    <script src="./assets/script.js"></script>
-</body>
-</html>
+            <nav>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">Brewery Finder</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link" href="#">My Profile</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <!-- carousel -->
+        <section class="carouselSection">
+            <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="10000">
+                    <img src="./assets/images/Monday-Night-Brewing-5-2-scaled copy.jpg" class="d-block w-100" alt="Monday Night brewery showing a selection of beers they offer">
+                    <div class="carousel-caption d-none d-md-block">
+                    <!-- <h5>Monday Night Brewery</h5>
+                    <p>Do we want anything to go here</p> -->
+                    </div>
+                </div>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img src="./assets/images/sweet-water-bs1_1200xx5504-3105-0-2359.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <!-- <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p> -->
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/scofflaw_GBH_FINAL_0002.jpeg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+                    <!-- <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p> -->
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="./assets/js/script.js"></script>
+    </body>
