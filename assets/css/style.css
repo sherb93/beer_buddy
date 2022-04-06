@@ -20,6 +20,11 @@ header{
     margin: 5px;
 }
 
+.brewery-block {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
 #about-us{
     text-align: center;
     margin: 20px 5px;
