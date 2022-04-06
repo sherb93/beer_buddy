@@ -1,37 +1,50 @@
-// call the API
-
-var brewery 
 
 
-// function autofillSearch ()
+// Define Variables
 
+// const search = document.getElementsById("search")
+// const matchList = document.getElementById("match-list")
 
-// function getBrewery
 
 fetch("https://api.openbrewerydb.org/breweries?by_state=georgia")
-    .then(res => console.log(res));
+  .then(response => response.json())
+  .then(data => console.log(data));
 
 
+// Get matches to current text input
+  let matches = data.filter(data => {
+    const regex = new RegExp('^${searchText}','gi');
+    return state.name.match(regex) || state.abbr.match(regex)
 
-var requestUrl ="https://getbootstrap.com/docs/5.0/examples/cheatsheet/"
-var beerList = document.querySelector('ul');
-var fetchButton = document.getElementById('fetch-button');
-
-function getApi() {
-  // replace `octocat` with anyone else's GitHub username
-  var requestUrl = 'https://api.openbrewerydb.org/breweries?by_state=georgia';
-
-  fetch(requestUrl)
-    .then(function (response) {
-      return response.json();
-    })
-    .then(function (data) {
-      for (var i = 0; i < data.length; i++) {
-        var listItem = document.createElement('li');
-        listItem.textContent = data[i].html_url;
-        repoList.appendChild(listItem);
-      }
-    });
+  })
 }
 
-fetchButton.addEventListener('click', getApi);
+if (search.text.length === 0) {
+  matches = []
+  matchList.innerHtml ="";
+}
+outputHtml(matches);
+
+
+// show results in html
+const outputHtml = matches => {
+  if (matches.length > 0) {
+    const html = matches.map(match => '
+    <div class="card card-body mb-1">
+    <h2>${match.name}</h2>
+    </div>
+  ')
+  .join("");
+  console.log(html);
+ }
+}
+
+search.addeventListenter("input", () => searchBrewery(search.value));
+
+
+// // function autofillSearch ()
+
+
+// // function getBrewery
+
+
