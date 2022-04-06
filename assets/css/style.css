@@ -25,3 +25,28 @@ header{
     padding: 1rem;
     border-radius: 10px;
 }
+#about-us{
+    text-align: center;
+    margin: 20px 5px;
+    background-color: lightgrey;
+    padding: 20px;
+}
+
+.aboutUsP{
+    text-align: center;
+}
+
+.image-cards{
+    margin:0;
+    margin-left: 20px;
+    display:flex;
+    justify-content: center;
+}
+
+.img-fluid{
+    margin:3px;
+}
+
+.card{
+    margin: 20px;
+}
