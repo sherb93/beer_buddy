@@ -1,5 +1,22 @@
 var APIUrl = "https://api.openbrewerydb.org/breweries?by_city=atlanta&per_page=50"
 var breweriesContainerEl = $("#breweries-container");
+var cityNameInput = $("#city-name");
+var citySearch = $("#city-search");
+
+console.log(cityNameInput);
+
+var getCityName = function(event) {
+    event.preventDefault();
+
+    var cityName = cityNameInput.val();
+
+    if (cityName) {
+        getBreweries(cityName);
+    } else {
+        alert("Please enter a valid US city");
+    }
+};
+
 
 // Pulls data for Atlanta breweries
 var getBreweries = function (location) {
@@ -72,4 +89,6 @@ var displayBreweries = function(data) {
     };
 }
 
-getBreweries("atlanta");
+// getBreweries("atlanta");
+
+citySearch.on("submit", getCityName)
