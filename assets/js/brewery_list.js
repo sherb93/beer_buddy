@@ -61,6 +61,7 @@ var displayBreweries = function(data) {
         addressEl.append(breweryCSZ);
         addressEl.append(breweryPhone);
 
+        blockEl.addClass( ["brewery-block", "bg-dark", "d-flex", "justify-content-between", "text-light"] )
         // Attach right and left elements to blockEl
         blockEl.append(infoEl);
         blockEl.append(addressEl);
@@ -68,12 +69,7 @@ var displayBreweries = function(data) {
         // Attach blockEl to the corresponding container
         breweriesContainerEl.append(blockEl);
 
-    }
-
-    
-    
-
-    //name, 
+    };
 }
 
 getBreweries("atlanta");
