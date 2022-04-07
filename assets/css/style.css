@@ -1,5 +1,3 @@
-
-
 header{
     display: flex;
     justify-content: space-between;
@@ -27,6 +25,7 @@ header{
     padding: 1rem;
     border-radius: 10px;
 }
+
 #about-us{
     text-align: center;
     margin: 20px 5px;
@@ -34,8 +33,9 @@ header{
     padding: 20px;
 }
 
-.aboutUsP{
+#aboutUsText{
     text-align: center;
+    margin: 0px 100px;
 }
 
 .image-cards{
@@ -53,34 +53,68 @@ header{
     margin: 20px;
 }
 
-#exampleDropdownFormEmail1 {
-    width: 10ch;
-    display: inline;
-    height: 2em;
-}
-
-/* .login {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-} */
-
 .container{
     text-align: center;
     margin: 50px;
 }
 
-#breweries-container{
-    margin:50px;
+.bvform {
+    width: 50%;
 }
 
-/* #searchBarDetail{
-    color: white;
-} */
+.reviewHeader{
+    position:center;
+    left: 20%;
+    padding-top: 4em;
+}
 
+
+.usernameCont{
+    width:50%;
+}
+
+.newBrewery{
+    display:block;
+    margin:2em;
+    text-align: center;
+}
+
+ol {
+    position:fixed;
+    left:50%;
+    width:400px;
+}
+
+.uName {
+    border: 1px solid black;
+}
+
+.displayTabs div{
+    width: 200px; 
+    float:left;
+    margin:10px;
+    display: block;
+    text-align: center;
+}
+
+  
+#breweries-container{
+    margin: 50px 25%;
+}
+
+.breweryInfo{
+    background-color: lightgrey;
+    margin: 5px;
+    line-height: normal;
+    padding: 5px;
+    border: 1px solid black;
+}
+
+.breweryInfo a, .breweryInfo p{
+    color: black;
+    line-height: normal;
+    margin: 0px;
+}
 
 #city, #state {
     height:2em;
@@ -92,7 +126,7 @@ header{
     background-color: lightgray
 }
 
-#signinBtn{
+#signinBtn, .newBrewery{
     text-decoration: none;
     color: black;
     border: 1px solid;
@@ -108,44 +142,6 @@ header{
     margin-top: 10px;
 }
 
-/* SEARCH PAGE CSS */
-/* 
-#location-search {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid black;
-}
-
-#location-search > * {
-    display: block;
-}
-
-#location-search label {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-weight: 800;
-}
-
-#city, #state {
-    margin-bottom: 0.5rem;
-    width: 100%;
-} */
-
-.search-btn {
-    background-color: orange;
-    width: 8rem;
-    margin: 0 auto 1rem;
-    border-radius: 10px;
-    transition: transform 1s;
-}
-
-.search-btn:hover {
-    transform: scale(1.1, 1.1)
-}
-
-.breweries-list-header {
-    text-align: center;
-}
-
 #chucknorris{
     text-align: center;
     background-image: url(../images/chucknorris.jpeg);
@@ -154,8 +150,17 @@ header{
     padding: 20px;
 }
 
+#displayDadJoke{
+    color: white;
+}
+
 h6{
     text-align: center;
     font-size: 10px;
     margin: 50px;
 }
+
+.count-text{
+    border: 1px solid black;
+}
+

@@ -159,7 +159,7 @@ var displayBreweries = function(data) {
         addressEl.append(breweryCSZ);
         addressEl.append(breweryPhone);
 
-        blockEl.addClass( ["brewery-block", "bg-dark", "d-flex", "justify-content-between", "text-light"] )
+        blockEl.addClass( ["breweryInfo"] )
         // Attach right and left elements to blockEl
         blockEl.append(infoEl);
         blockEl.append(addressEl);
