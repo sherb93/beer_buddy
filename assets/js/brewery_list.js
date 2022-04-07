@@ -3,6 +3,7 @@ var cityInput = $("#city");
 var stateInput = $("#state");
 var locationSearch = $("#location-search");
 
+
 // Formats user inputs to API's required formatting
 var getLocationValues = function() {
     var city = cityInput.val().replace(".", "").replace(" ", "_");
@@ -96,6 +97,7 @@ var getBreweries = function (cityValue, stateValue) {
             return response.json().then(function (data) {
                 console.log(data);
                 displayBreweries(data);
+                initMap(data);
             })
         } else {
             alert("Error: " + response.status);
@@ -163,6 +165,54 @@ var displayBreweries = function(data) {
     };
 }
 
+function initMap(data){
+    var setMarkers = function(map) {
+        console.log(breweriesArray);
+        for (let i = 0; i < breweriesArray.length; i++) {
+            var brewName = breweriesArray[i][0];
+            var brewLat = parseFloat(breweriesArray[i][1]);
+            var brewLon = parseFloat(breweriesArray[i][2]);
+
+            if (brewName !== null && brewLat !== null && brewLon !== null) {
+                new google.maps.Marker({
+                    position: { lat: brewLat, lng: brewLon },
+                    map,
+                    title: brewName,
+                });
+            }
+        }
+    }
+
+    
+    var createArrays = function(data) {
+        breweriesArray = []
+    
+        for (i = 0; i < data.length; i++) {
+            var array = [data[i].name, data[i].latitude, data[i].longitude];
+            breweriesArray.push(array);
+        }
+    }    
+
+    for (i = 0; i < data.length; i++) {
+        if (data[i].latitude && data[i].longitude) {
+            var cityLatitude = parseFloat(data[i].latitude);
+            var cityLongitude = parseFloat(data[i].longitude);
+            break;
+        } 
+    };
+
+    createArrays(data);
+    //breweriesArray is the value from this function
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: { lat: cityLatitude, lng: cityLongitude},
+      });
+    
+    setMarkers(map);
+}
+
+
 
 locationSearch.on("submit", function (event) {
     event.preventDefault();
@@ -174,3 +224,5 @@ locationSearch.on("submit", function (event) {
         alert("Please enter a city and state.");
     }
 })
+
+getBreweries("Atlanta", "Georgia")
