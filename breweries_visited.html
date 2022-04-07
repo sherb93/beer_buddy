@@ -38,42 +38,26 @@
             <form class="inputContainer container">
                 <label>Visited Breweries</label>
                 <input  type="text" id="input" placeholder="Brewery Name" name="search">
-                <input value="Add" type="submit">
-            </form>
-            <ol id="brewList"></ol>   
+                <input id="searchBtn" value="Add" type="submit">
+            </form> 
         </section>
 
-            <section class="visitedBox">
-                <form class="inputContainer container">
-                    <label>Which brewery have you visited?</label>
-                    <input  type="text" id="input" placeholder="Brewery Name" name="search">
-                    <input id="searchBtn" value="Add" type="submit">
-                </form>
-                <ol id="brewList"></ol>   
-            </section>
+        <!-- Breweries Visted and Username Display -->
+        <section class="brewCounter">
+            <div class="displayTabs">              
+                <div class="count-text counter visitCount">Breweries Visited</div>
+                <div class="uName">Username</div>
+            </div>
+        </section>
 
-                    <!-- Brewery Visit Counter -->
-            <section class="brewCounter">
-                <div class="row text-center">
-                    <div class="col">
-                    <div class="counter">
-                    <h2 class="visitCount"></h2>                
-                    <p class="count-text ">Breweries Visited</p>
-                </div>
-            </section>
-
-            <!-- Reviews -->
-            <section>
-                <h1 class="reviewHeader">Brewery Reviews</h1>
-
-            </section>
-
-        <!-- User Name Container -->
         <section>
-            <div class="container-md border rounded uName">User Name</div>
+            <ol id="brewList"></ol>  
         </section>
 
-
+        <!-- Reviews -->
+        <section>
+            <h1 class="reviewHeader">Brewery Reviews</h1>
+        </section>
 
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
