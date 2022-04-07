@@ -3,6 +3,7 @@ var cityInput = $("#city");
 var stateInput = $("#state");
 var locationSearch = $("#location-search");
 
+
 // Formats user inputs to API's required formatting
 var getLocationValues = function() {
     var city = cityInput.val().replace(".", "").replace(" ", "_");
@@ -96,6 +97,7 @@ var getBreweries = function (cityValue, stateValue) {
             return response.json().then(function (data) {
                 console.log(data);
                 displayBreweries(data);
+                initMap(data);
             })
         } else {
             alert("Error: " + response.status);
@@ -103,7 +105,7 @@ var getBreweries = function (cityValue, stateValue) {
     })
 };
 
-// Create 
+// Create elements with brewery information
 var displayBreweries = function(data) {
     // If there are no breweries in that city alert the user
     if (data.length < 1) {
@@ -163,7 +165,60 @@ var displayBreweries = function(data) {
     };
 }
 
+// Adds location data to the map
+function initMap(data){
 
+    // Creates an array of nested arrays with required data for setMarkers function
+    var createArrays = function(data) {
+        breweriesArray = []
+    
+        // Adds a nested array into breweriesArray for each brewery
+        for (i = 0; i < data.length; i++) {
+            var array = [data[i].name, data[i].latitude, data[i].longitude];
+            breweriesArray.push(array);
+        }
+    }    
+    
+    // Creates markers for google maps with breweries that have lat and lon values
+    var setMarkers = function(map) {
+
+        for (let i = 0; i < breweriesArray.length; i++) {
+            var brewName = breweriesArray[i][0];
+            var brewLat = parseFloat(breweriesArray[i][1]);
+            var brewLon = parseFloat(breweriesArray[i][2]);
+
+            // If brewery has all 3 values requried then it creates a marker
+            if (brewName !== null && brewLat !== null && brewLon !== null) {
+                new google.maps.Marker({
+                    position: { lat: brewLat, lng: brewLon },
+                    map,
+                    title: brewName,
+                });
+            }
+        }
+    }
+
+    // Gets the first lon and lat value from a brewery to center the map around the city
+    for (i = 0; i < data.length; i++) {
+        if (data[i].latitude && data[i].longitude) {
+            var cityLatitude = parseFloat(data[i].latitude);
+            var cityLongitude = parseFloat(data[i].longitude);
+            break;
+        } 
+    };
+
+    createArrays(data);
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 10,
+        center: { lat: cityLatitude, lng: cityLongitude},
+      });
+    
+    setMarkers(map);
+}
+
+
+// Event listener for user inputs
 locationSearch.on("submit", function (event) {
     event.preventDefault();
 
@@ -174,3 +229,6 @@ locationSearch.on("submit", function (event) {
         alert("Please enter a city and state.");
     }
 })
+
+// Initialized page with ATL baby
+getBreweries("Atlanta", "Georgia")
