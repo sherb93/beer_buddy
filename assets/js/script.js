@@ -30,8 +30,3 @@ var countBrew = function() {
     brewCounter++;
     visitCount.text(brewCounter);
 }
-
-
-
-
-// // // function autofillSearch ()
