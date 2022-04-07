@@ -21,7 +21,7 @@
                     <a class="nav-link" aria-current="page" href="./index.html">About Us</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#city-name">Brewery Finder</a>
+                    <a class="nav-link" href="#city-state">Brewery Finder</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link" href="./username.html">My Profile</a>
@@ -30,17 +30,18 @@
             </nav>
         </header>
 
-        <main>
-            <div class="container d-flex">
-                <div class="left-container col-3">
-                    <form id="city-search">
-                        <label for="city">Find Breweries In Any City!</label>
-                        <input type="text" id="city-name" name="city-name">
-                        <input type="submit">
+        <main class="container-lg container-fluid my-4">
+            <div class="row">
+                <div class="left-container col-12 col-sm-3">
+                    <form id="location-search" class="">
+                        <label for="city-state">Enter a City & State</label>
+                        <input type="text" id="city" name="city" placeholder="City">
+                        <input type="text" id="state" name="state" placeholder="State">
+                        <input type="submit" class="search-btn" value="Find Beer! 🍺">
                     </form>
                     <div id="previous-history"></div>
                 </div>
-                <div id="breweries-container" class="col-9"></div>
+                <div id="breweries-container" class="col"></div>
 
             </div>
         </main>
