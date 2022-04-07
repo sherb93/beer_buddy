@@ -16,7 +16,7 @@ fetch("https://api.openbrewerydb.org/breweries?by_state=georgia")
     return state.name.match(regex) || state.abbr.match(regex)
 
   })
-}
+};
 
 if (search.text.length === 0) {
   matches = []
