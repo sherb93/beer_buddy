@@ -86,21 +86,20 @@ ol {
 }
 
 .uName {
-    position:fixed;
-    left:5%;
-    top:33%;
-    width:25%;
+    border: 1px solid black;
 }
 
-.col{
-    position:fixed;
-    right:48%;
-    width:25%;
+.displayTabs div{
+    width: 200px; 
+    float:left;
+    margin:10px;
+    display: block;
+    text-align: center;
 }
+
   
 #breweries-container{
     margin: 50px 25%;
-
 }
 
 .breweryInfo{
@@ -160,3 +159,8 @@ h6{
     font-size: 10px;
     margin: 50px;
 }
+
+.count-text{
+    border: 1px solid black;
+}
+
