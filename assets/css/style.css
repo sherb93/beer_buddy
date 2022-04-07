@@ -1,5 +1,4 @@
 
-
 header{
     display: flex;
     justify-content: space-between;
@@ -72,6 +71,34 @@ header{
     text-align: center;
     margin: 50px;
 }
+
+.bvform {
+    width: 50%;
+}
+
+
+.reviewHeader{
+    padding:10em;
+}
+
+
+#fright{
+    display:flex;
+    justify-content:right
+}
+
+.usernameCont{
+    width:50%;
+
+}
+
+.newBrewery{
+    display:block;
+    margin:2em;
+
+}
+  
+    
 
 #breweries-container{
     margin:50px;
