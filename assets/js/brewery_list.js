@@ -103,7 +103,7 @@ var getBreweries = function (cityValue, stateValue) {
     })
 };
 
-// Create 
+// Create elements with brewery information
 var displayBreweries = function(data) {
     // If there are no breweries in that city alert the user
     if (data.length < 1) {
