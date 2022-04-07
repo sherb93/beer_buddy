@@ -1,6 +1,4 @@
-/* body{
-    background-color: #202124;
-} */
+
 
 header{
     display: flex;
@@ -146,4 +144,18 @@ header{
 
 .breweries-list-header {
     text-align: center;
+}
+
+#chucknorris{
+    text-align: center;
+    background-image: url(../images/chucknorris.jpeg);
+    color:white;
+    margin:5px;
+    padding: 20px;
+}
+
+h6{
+    text-align: center;
+    font-size: 10px;
+    margin: 50px;
 }
