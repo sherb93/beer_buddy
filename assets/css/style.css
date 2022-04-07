@@ -1,6 +1,3 @@
-/* body{
-    background-color: #202124;
-} */
 
 header{
     display: flex;
@@ -138,7 +135,7 @@ header{
     background-color: lightgray
 }
 
-#signinBtn, .newBrewery {
+#signinBtn{
     text-decoration: none;
     color: black;
     border: 1px solid;
@@ -146,6 +143,12 @@ header{
     background-color: #EFEFEF;
     padding: 6px 6px;
     border-radius: 3px; 
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+    margin-top: 10px;
 }
 
 /* SEARCH PAGE CSS */
@@ -184,4 +187,18 @@ header{
 
 .breweries-list-header {
     text-align: center;
+}
+
+#chucknorris{
+    text-align: center;
+    background-image: url(../images/chucknorris.jpeg);
+    color:white;
+    margin:5px;
+    padding: 20px;
+}
+
+h6{
+    text-align: center;
+    font-size: 10px;
+    margin: 50px;
 }
