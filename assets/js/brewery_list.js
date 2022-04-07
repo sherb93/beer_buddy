@@ -165,14 +165,29 @@ var displayBreweries = function(data) {
     };
 }
 
+// Adds location data to the map
 function initMap(data){
+
+    // Creates an array of nested arrays with required data for setMarkers function
+    var createArrays = function(data) {
+        breweriesArray = []
+    
+        // Adds a nested array into breweriesArray for each brewery
+        for (i = 0; i < data.length; i++) {
+            var array = [data[i].name, data[i].latitude, data[i].longitude];
+            breweriesArray.push(array);
+        }
+    }    
+    
+    // Creates markers for google maps with breweries that have lat and lon values
     var setMarkers = function(map) {
-        console.log(breweriesArray);
+
         for (let i = 0; i < breweriesArray.length; i++) {
             var brewName = breweriesArray[i][0];
             var brewLat = parseFloat(breweriesArray[i][1]);
             var brewLon = parseFloat(breweriesArray[i][2]);
 
+            // If brewery has all 3 values requried then it creates a marker
             if (brewName !== null && brewLat !== null && brewLon !== null) {
                 new google.maps.Marker({
                     position: { lat: brewLat, lng: brewLon },
@@ -183,16 +198,7 @@ function initMap(data){
         }
     }
 
-    
-    var createArrays = function(data) {
-        breweriesArray = []
-    
-        for (i = 0; i < data.length; i++) {
-            var array = [data[i].name, data[i].latitude, data[i].longitude];
-            breweriesArray.push(array);
-        }
-    }    
-
+    // Gets the first lon and lat value from a brewery to center the map around the city
     for (i = 0; i < data.length; i++) {
         if (data[i].latitude && data[i].longitude) {
             var cityLatitude = parseFloat(data[i].latitude);
@@ -202,7 +208,6 @@ function initMap(data){
     };
 
     createArrays(data);
-    //breweriesArray is the value from this function
 
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 10,
@@ -213,7 +218,7 @@ function initMap(data){
 }
 
 
-
+// Event listener for user inputs
 locationSearch.on("submit", function (event) {
     event.preventDefault();
 
@@ -225,4 +230,5 @@ locationSearch.on("submit", function (event) {
     }
 })
 
+// Initialized page with ATL baby
 getBreweries("Atlanta", "Georgia")
