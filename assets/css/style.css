@@ -1,3 +1,7 @@
+/* body{
+    background-color: #202124;
+} */
+
 header{
     display: flex;
     justify-content: space-between;
@@ -52,14 +56,49 @@ header{
 }
 
 #exampleDropdownFormEmail1 {
-	width: 100%;
+    width: 10ch;
+    display: inline;
+    height: 2em;
 }
 
-.login {
+/* .login {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
 	height: 100%;
 	width: 100%;
+} */
+
+.container{
+    text-align: center;
+    margin: 50px;
+}
+
+#breweries-container{
+    margin:50px;
+}
+
+/* #searchBarDetail{
+    color: white;
+} */
+
+#city-name{
+    height:2em;
+    width: 10ch;
+}
+
+#login, #city-search, .inputContainer{
+    padding: 10px;
+    background-color: lightgray
+}
+
+#signinBtn{
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    border-color: rgb(118, 118, 118);
+    background-color: #EFEFEF;
+    padding: 6px 6px;
+    border-radius: 3px;
 }
