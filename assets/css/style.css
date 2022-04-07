@@ -76,27 +76,11 @@ header{
     width: 50%;
 }
 
-.visitedHeader {
-    
-    width:100%;
-}
-
-.brewvisit{
-    display:block;
-    justify-content: center;
-    
-    
-}
 
 .reviewHeader{
     padding:10em;
 }
 
-#searchBtn{
-    display:flex;
-    flex-direction: right;
-    
-}
 
 #fright{
     display:flex;
