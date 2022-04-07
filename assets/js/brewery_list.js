@@ -118,6 +118,7 @@ var displayBreweries = function(data) {
     header.addClass("breweries-list-header");
     breweriesContainerEl.append(header);
 
+    // Creates elements to populate data onto the webpage
     for (i = 0; i < data.length; i++) {
         // Capitalizes strings
         var capitalize = function(string) {
@@ -219,7 +220,7 @@ function initMap(data){
       });
     
     setMarkers(map);
-}
+};
 
 
 // Event listener for user inputs
