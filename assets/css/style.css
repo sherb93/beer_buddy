@@ -67,13 +67,12 @@ header{
 }
 
 .reviewHeader{
-    padding:10em;
+    position:center;
+    left: 20%;
+    padding-top: 4em;
+
 }
 
-#fright{
-    display:flex;
-    justify-content:right
-}
 
 .usernameCont{
     width:50%;
@@ -82,6 +81,27 @@ header{
 .newBrewery{
     display:block;
     margin:2em;
+    text-align: center;
+
+}
+
+ol {
+    position:fixed;
+    left:50%;
+    width:400px;
+
+}
+
+.uName {
+    position:fixed;
+    left:5%;
+    top:33%;
+    width:25%;
+}
+.col{
+    position:fixed;
+    right:48%;
+    width:25%;
 }
   
 #breweries-container{
@@ -113,7 +133,7 @@ header{
     background-color: lightgray
 }
 
-#signinBtn{
+#signinBtn, .newBrewery{
     text-decoration: none;
     color: black;
     border: 1px solid;
