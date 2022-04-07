@@ -3,7 +3,11 @@
 var searchBtn = $("#searchBtn")
 var brewList= $("#brewList")
 var userInput = $("#input")
+var clickableBrew = $(".newBrewery")
+var numVisits = $("<div>").length;
 
+
+// Pulls in form data
 searchBtn.on("click", function(event) {
     event.preventDefault()
     var brewInput = userInput.val();
@@ -12,15 +16,24 @@ searchBtn.on("click", function(event) {
 })
 
 
+// Creates a list with the data 
 var listCreator = function(brewInput) {
-var newBrew = $("<li>");
+var newBrew = $("<a>").addClass("newBrewery");
 newBrew.text(brewInput);
 brewList.append(newBrew);
-
-
-    
+   
 }
 
+// Create function to click on <a>
+
+
+clickableBrew.on("click", function(e) {
+    e.preventDefault();
+    var newReview = $("<div>").addClass("newReview")
+    
+
+
+})
 
 
 

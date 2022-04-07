@@ -64,3 +64,26 @@ header{
 	width: 100%;
 }
 
+.bvform {
+    width: 50%;
+}
+
+.visitedHeader {
+    
+    width:50%;
+}
+.brewvisit{
+    margin-left: 50%;
+    
+}
+
+#searchBtn{
+    display:flex;
+    flex-direction: right;
+    
+}
+
+.test{
+    display:block;
+    justify-content:center
+}

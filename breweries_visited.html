@@ -33,13 +33,29 @@
             </nav>
         </header>
         <!-- User Name Container -->
+        <section>
+            <div class="container-md border rounded">User Name</div>
+        </section>
+        <!-- Brewery Visit Counter -->
+        <section class="brewCounter">
+            <div class="row text-center">
+                <div class="col">
+                <div class="counter">
+          <i class="fa fa-code fa-beer"></i>
+          <h2 class="visitCount">100</h2>
+           <p class="count-text ">Breweries Visited</p>
+        </div>
+        </section>
 
-        <!-- Breweries You've Visited Tracker -->
-      
-        <section class="container mt-5">             
-            <h1 class="visitedHeader mb-3"> List of Breweries Visited </h1>
+        <section>
+            <div></div>
+        </section>
+
+        <!-- Breweries You've Visited Form -->
+                <section class="container mt-5 brewvisit">             
+            <h1 class="visitedHeader mb-2"> List of Breweries Visited </h1>
             <form id="input-form" class="form-group">
-                 <input for="search-form" type="text" id="input" placeholder="Sweet Water" class="form-control form-control-lg"/>
+                 <input for="search-form" type="text" id="input" placeholder="Sweet Water" class="form-control form-control-lg bvform"/>
                   <button for="Search-form" id="searchBtn" type="submit">Add</button>
             </form>    
             <ol id="brewList"></ol>               
