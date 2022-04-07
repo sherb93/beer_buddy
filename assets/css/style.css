@@ -83,14 +83,13 @@ header{
     color: white;
 } */
 
-/* 
-Devyn adjusted code ---->
-#city-name{
+
+#city, #state {
     height:2em;
     width: 10ch;
 }
 
-#login, #city-search, .inputContainer{
+#login, #location-search, .inputContainer{
     padding: 10px;
     background-color: lightgray
 }
@@ -103,11 +102,10 @@ Devyn adjusted code ---->
     background-color: #EFEFEF;
     padding: 6px 6px;
     border-radius: 3px; 
-    
------> */
+}
 
 /* SEARCH PAGE CSS */
-
+/* 
 #location-search {
     margin-bottom: 2rem;
     border-bottom: 2px solid black;
@@ -126,7 +124,7 @@ Devyn adjusted code ---->
 #city, #state {
     margin-bottom: 0.5rem;
     width: 100%;
-}
+} */
 
 .search-btn {
     background-color: orange;
