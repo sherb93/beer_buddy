@@ -87,3 +87,16 @@ header{
     display:block;
     justify-content:center
 }
+
+.usernameCont{
+    width:50%;
+
+}
+
+.newBrewery{
+    display:flex;
+    flex-direction: column;    
+    margin:20px;
+    
+
+}

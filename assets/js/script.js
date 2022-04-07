@@ -30,8 +30,8 @@ brewList.append(newBrew);
 clickableBrew.on("click", function(e) {
     e.preventDefault();
     var newReview = $("<div>").addClass("newReview")
-    
 
+    
 
 })
 
