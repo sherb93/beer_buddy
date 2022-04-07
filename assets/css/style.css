@@ -33,8 +33,13 @@ header{
     padding: 20px;
 }
 
-.aboutUsP{
+/* .aboutUsP{
     text-align: center;
+} */
+
+#aboutUsText{
+    text-align: center;
+    margin: 0px 100px;
 }
 
 .image-cards{
@@ -80,7 +85,8 @@ header{
 }
   
 #breweries-container{
-    margin:50px;
+    margin: 50px 25%;
+
 }
 
 .breweryInfo{
@@ -91,7 +97,7 @@ header{
     border: 1px solid black;
 }
 
-.breweryInfo a, p{
+.breweryInfo a, .breweryInfo p{
     color: black;
     line-height: normal;
     margin: 0px;
@@ -159,6 +165,10 @@ header{
     color:white;
     margin:5px;
     padding: 20px;
+}
+
+#displayDadJoke{
+    color: white;
 }
 
 h6{
