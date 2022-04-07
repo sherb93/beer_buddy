@@ -33,10 +33,6 @@ header{
     padding: 20px;
 }
 
-/* .aboutUsP{
-    text-align: center;
-} */
-
 #aboutUsText{
     text-align: center;
     margin: 0px 100px;
@@ -70,7 +66,6 @@ header{
     position:center;
     left: 20%;
     padding-top: 4em;
-
 }
 
 
@@ -82,14 +77,12 @@ header{
     display:block;
     margin:2em;
     text-align: center;
-
 }
 
 ol {
     position:fixed;
     left:50%;
     width:400px;
-
 }
 
 .uName {
@@ -98,6 +91,7 @@ ol {
     top:33%;
     width:25%;
 }
+
 .col{
     position:fixed;
     right:48%;
@@ -148,36 +142,6 @@ ol {
     width: 100%;
     margin-top: 10px;
 }
-
-/* SEARCH PAGE CSS */
-/* 
-#location-search {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid black;
-}
-
-#location-search > * {
-    display: block;
-}
-
-#location-search label {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-weight: 800;
-}
-
-#city, #state {
-    margin-bottom: 0.5rem;
-    width: 100%;
-} */
-
-/* .search-btn {
-    background-color: orange;
-    width: 8rem;
-    margin: 0 auto 1rem;
-    border-radius: 10px;
-    transition: transform 1s;
-} */
 
 #chucknorris{
     text-align: center;
