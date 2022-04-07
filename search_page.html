@@ -30,18 +30,18 @@
             </nav>
         </header>
 
-        <main>
-            <div class="container d-flex">
-                <div class="left-container col-3">
-                    <form id="location-search">
-                        <label for="city-state">Find Breweries In Any City!</label>
+        <main class="container-lg container-fluid my-4">
+            <div class="row">
+                <div class="left-container col-12 col-sm-3">
+                    <form id="location-search" class="">
+                        <label for="city-state">Enter a City & State</label>
                         <input type="text" id="city" name="city" placeholder="City">
                         <input type="text" id="state" name="state" placeholder="State">
-                        <input type="submit">
+                        <input type="submit" class="search-btn" value="Find Beer! 🍺">
                     </form>
                     <div id="previous-history"></div>
                 </div>
-                <div id="breweries-container" class="col-9"></div>
+                <div id="breweries-container" class="col"></div>
 
             </div>
         </main>

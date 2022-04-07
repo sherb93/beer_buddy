@@ -1,4 +1,3 @@
-var APIUrl = "https://api.openbrewerydb.org/breweries?by_city=atlanta&per_page=50"
 var breweriesContainerEl = $("#breweries-container");
 var cityInput = $("#city");
 var stateInput = $("#state");
@@ -6,7 +5,7 @@ var locationSearch = $("#location-search");
 
 // Formats user inputs to API's required formatting
 var getLocationValues = function() {
-    var city = cityInput.val().replace(".", "").replace(" ", "_").toLowerCase();
+    var city = cityInput.val().replace(".", "").replace(" ", "_");
     
     // Converts a state's abbreviation to the name
     var convertStateAbbr = function(stateCode) {
@@ -74,7 +73,7 @@ var getLocationValues = function() {
 
     // Decides how to deal with state input value
     if (stateInput.val().length > 2) {
-        var state = stateInput.val().replace(" ", "_").toLowerCase();
+        var state = stateInput.val().replace(" ", "_");
     } else if (stateInput.val().length === 2) {
         var state = convertStateAbbr(stateInput);
     } else if (stateInput.val().length < 2) {
@@ -90,7 +89,6 @@ var getLocationValues = function() {
 
 // Pulls breweries for users chosen location
 var getBreweries = function (cityValue, stateValue) {
-    console.log(cityValue, stateValue);
     var APIUrl = `https://api.openbrewerydb.org/breweries?by_city=${cityValue}&by_state=${stateValue}&per_page=50`
 
     fetch(APIUrl).then(function (response) {
@@ -112,6 +110,11 @@ var displayBreweries = function(data) {
         breweriesContainerEl.text("No breweries in this city. Either double check your spelling or never visit this boring city.");
         return;
     }
+
+    var header = $("<h1>");
+    header.text(`Breweries in ${data[0].city}, ${data[0].state}`);
+    header.addClass("breweries-list-header");
+    breweriesContainerEl.append(header);
 
     for (i = 0; i < data.length; i++) {
         // Create main elements
@@ -142,7 +145,7 @@ var displayBreweries = function(data) {
         // Fill right side info with data
         breweryStreet.text(data[i].street);
         breweryCSZ.text(`${data[i].city}, ${data[i].state}, ${data[i].postal_code}`);
-        breweryPhone.text(data[i].phone);
+        breweryPhone.text(`PH: ${data[i].phone}`);
 
         // Attach right side info
         addressEl.append(breweryStreet);
