@@ -32,7 +32,24 @@
                 </ul>
             </nav>
         </header>
+
+         <!-- Breweries You've Visited Form -->
+                <section class="container mt-5 brewvisit">             
+            <h1 class="visitedHeader mb-2"> List of Breweries Visited </h1>
+            <form id="input-form fright " class="form-group">
+                 <input for="search-form" type="text" id="input" placeholder="SweetWater" class="form-control form-control-lg bvform"/>
+                  <button for="Search-form" id="searchBtn" type="submit">Add</button>
+            </form>    
+            <ol id="brewList"></ol>   
+
+            <!-- Reviews -->
+            <section>
+                <h1 class="reviewHeader">Brewery Reviews</h1>
+
+            </section>
+
         <!-- User Name Container -->
+        
         <section>
             <div class="container-md border rounded ">User Name</div>
         </section>
@@ -41,25 +58,13 @@
             <div class="row text-center">
                 <div class="col">
                 <div class="counter">
-                <h2 class="visitCount">100</h2>
+                <h2 class="visitCount"></h2>
                 
            <p class="count-text ">Breweries Visited</p>
         </div>
         </section>
 
-        <section>
-            <div></div>
-        </section>
 
-        <!-- Breweries You've Visited Form -->
-                <section class="container mt-5 brewvisit">             
-            <h1 class="visitedHeader mb-2"> List of Breweries Visited </h1>
-            <form id="input-form" class="form-group">
-                 <input for="search-form" type="text" id="input" placeholder="Sweet Water" class="form-control form-control-lg bvform"/>
-                  <button for="Search-form" id="searchBtn" type="submit">Add</button>
-            </form>    
-            <ol id="brewList"></ol>               
-        </section>
     </body>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>

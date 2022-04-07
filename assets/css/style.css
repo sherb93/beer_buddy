@@ -1,3 +1,7 @@
+/* body{
+    background-color: #202124;
+} */
+
 header{
     display: flex;
     justify-content: space-between;
@@ -52,16 +56,23 @@ header{
 }
 
 #exampleDropdownFormEmail1 {
-	width: 100%;
+    width: 10ch;
+    display: inline;
+    height: 2em;
 }
 
-.login {
+/* .login {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: absolute;
 	height: 100%;
 	width: 100%;
+} */
+
+.container{
+    text-align: center;
+    margin: 50px;
 }
 
 .bvform {
@@ -70,11 +81,18 @@ header{
 
 .visitedHeader {
     
-    width:50%;
+    width:100%;
 }
+
 .brewvisit{
-    margin-left: 50%;
+    display:block;
+    justify-content: center;
     
+    
+}
+
+.reviewHeader{
+    padding:10em;
 }
 
 #searchBtn{
@@ -83,9 +101,9 @@ header{
     
 }
 
-.test{
-    display:block;
-    justify-content:center
+#fright{
+    display:flex;
+    justify-content:right
 }
 
 .usernameCont{
@@ -94,9 +112,76 @@ header{
 }
 
 .newBrewery{
-    display:flex;
-    flex-direction: column;    
-    margin:20px;
+    display:block;
+    margin:2em;
+
+}
+  
     
 
+#breweries-container{
+    margin:50px;
+}
+
+/* #searchBarDetail{
+    color: white;
+} */
+
+
+#city, #state {
+    height:2em;
+    width: 10ch;
+}
+
+#login, #location-search, .inputContainer{
+    padding: 10px;
+    background-color: lightgray
+}
+
+#signinBtn, .newBrewery {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    border-color: rgb(118, 118, 118);
+    background-color: #EFEFEF;
+    padding: 6px 6px;
+    border-radius: 3px; 
+}
+
+/* SEARCH PAGE CSS */
+/* 
+#location-search {
+    margin-bottom: 2rem;
+    border-bottom: 2px solid black;
+}
+
+#location-search > * {
+    display: block;
+}
+
+#location-search label {
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: 800;
+}
+
+#city, #state {
+    margin-bottom: 0.5rem;
+    width: 100%;
+} */
+
+.search-btn {
+    background-color: orange;
+    width: 8rem;
+    margin: 0 auto 1rem;
+    border-radius: 10px;
+    transition: transform 1s;
+}
+
+.search-btn:hover {
+    transform: scale(1.1, 1.1)
+}
+
+.breweries-list-header {
+    text-align: center;
 }
