@@ -1,255 +1,206 @@
 header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    background-color: lightgray;
-    margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: lightgray;
+  margin: 5px;
 }
 
 .nav-link{
-    color: black;
-    display: inline;
+  color: black;
+  display: inline;
 }
 
 .nav-item:nth-child(even){
-    border-left: 1px solid black;
-    border-right: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
 }
 
 .carouselSection{
-    margin: 5px;
+  margin: 5px;
 }
 
 .brewery-block {
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 #about-us{
-    text-align: center;
-    margin: 20px 5px;
-    background-color: lightgrey;
-    padding: 20px;
+  text-align: center;
+  margin: 20px 5px;
+  background-color: lightgrey;
+  padding: 20px;
 }
 
 #aboutUsText{
-    text-align: center;
-    margin: 0px 100px;
+  text-align: center;
+  margin: 0px 100px;
 }
 
 .image-cards{
-    margin:0;
-    margin-left: 20px;
-    display:flex;
-    justify-content: center;
+  margin:0;
+  margin-left: 20px;
+  display:flex;
+  justify-content: center;
 }
 
 .img-fluid{
-    margin:3px;
+  margin:3px;
 }
 
 .card{
-    margin: 20px;
+  margin: 20px;
 }
 
 .container{
-    text-align: center;
-    margin: 50px;
+  text-align: center;
+  margin: 50px;
 }
 
 .bvform {
-    width: 50%;
+  width: 50%;
 }
 
 .reviewHeader{
-    position:center;
-    left: 20%;
-    padding-top: 4em;
+  position:center;
+  left: 20%;
+  padding-top: 4em;
 }
 
 
 .usernameCont{
-    width:50%;
+  width:50%;
 }
 
 .newBrewery{
-    display:block;
-    margin:2em;
-    text-align: center;
+  display:block;
+  margin:2em;
+  text-align: center;
 }
 
-ol {
-    position:fixed;
-    left:50%;
-    width:400px;
+#brewList {
+  
+  position:fixed;
+  left:50%;
+  width:400px;
 }
 
 .uName {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .displayTabs div{
-    width: 200px; 
-    float:left;
-    margin:10px;
-    display: block;
-    text-align: center;
+  width: 200px; 
+  float:left;
+  margin:10px;
+  display: block;
+  text-align: center;
 }
 
-  
+
 #breweries-container{
-    margin: 50px 25%;
+  margin: 50px 25%;
 }
 
 .breweryInfo{
-    background-color: lightgrey;
-    margin: 5px;
-    line-height: normal;
-    padding: 5px;
-    border: 1px solid black;
+  background-color: lightgrey;
+  margin: 5px;
+  line-height: normal;
+  padding: 5px;
+  border: 1px solid black;
 }
 
 .breweryInfo a, .breweryInfo p{
-    color: black;
-    line-height: normal;
-    margin: 0px;
+  color: black;
+  line-height: normal;
+  margin: 0px;
 }
 
 #city, #state {
-    height:2em;
-    width: 10ch;
+  height:2em;
+  width: 10ch;
 }
 
 #login, #location-search, .inputContainer{
-    padding: 10px;
-    background-color: lightgray
+  padding: 10px;
+  background-color: lightgray
 }
 
 #signinBtn, .newBrewery{
-    text-decoration: none;
-    color: black;
-    border: 1px solid;
-    border-color: rgb(118, 118, 118);
-    background-color: #EFEFEF;
-    padding: 6px 6px;
-    border-radius: 3px; 
+  text-decoration: none;
+  color: black;
+  border: 1px solid;
+  border-color: rgb(118, 118, 118);
+  background-color: #EFEFEF;
+  padding: 6px 6px;
+  border-radius: 3px; 
 }
 
 #map {
-    height: 400px;
-    width: 100%;
-    margin-top: 10px;
+  height: 400px;
+  width: 100%;
+  margin-top: 10px;
 }
 
 #chucknorris{
-    text-align: center;
+  text-align: center;
+  background-image: url(../images/chucknorris.jpeg);
+  color:white;
+  margin:5px;
+  padding: 20px;
 }
 
-.breweries-login {
-    text-align: left;
-}
-
-.container .post{
-  display: none;
-}
-.container .text{
-  font-size: 25px;
-  color: #666;
-  font-weight: 500;
-}
-.container .git edit{
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  font-size: 16px;
-  color: #666;
-  font-weight: 500;
-  cursor: pointer;
-}
-.container .edit:hover{
-  text-decoration: underline;
-}
-.container .star-widget input{
-  display: none;
-}
-.star-widget label{
-  font-size: 40px;
-  color: #444;
-  padding: 10px;
-  float: right;
-  transition: all 0.2s ease;
-}
-input:not(:checked) ~ label:hover,
-input:not(:checked) ~ label:hover ~ label{
-  color: #fd4;
-}
-input:checked ~ label{
-  color: #fd4;
-}
-input#rate-5:checked ~ label{
-  color: #fe7;
-  text-shadow: 0 0 20px #952;
-}
-
-.container form{
-  display: none;
-}
-input:checked ~ form{
-  display: block;
-}
-
-form .textarea{
-  height: 100px;
-  width: 100%;
-  overflow: hidden;
-}
-form .textarea textarea{
-  height: 100%;
-  width: 100%;
-  outline: none;
-  color: #eee;
-  border: 1px solid #333;
-  background: #222;
-  padding: 10px;
-  font-size: 17px;
-  resize: none;
-}
-.textarea textarea:focus{
-  border-color: #444;
-}
-form .btn{
-  height: 45px;
-  width: 100%;
-  margin: 15px 0;
-}
-form .btn button{
-  height: 100%;
-  width: 100%;
-  border: 1px solid #444;
-  outline: none;
-  background: #222;
-  color: #999;
-  font-size: 17px;
-  font-weight: 500;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-form .btn button:hover{
-  background: #1b1b1b;
-}
 #displayDadJoke{
-    color: white;
+  color: white;
 }
 
 h6{
-    text-align: center;
-    font-size: 10px;
-    margin: 50px;
+  text-align: center;
+  font-size: 10px;
+  margin: 50px;
 }
 
 .count-text{
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+.rate {
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+}
+.rate:not(:checked) > input {
+  position:absolute;
+  top:-9999px;
+}
+.rate:not(:checked) > label {
+  float:right;
+  width:1em;
+  overflow:hidden;
+  white-space:nowrap;
+  cursor:pointer;
+  font-size:30px;
+  color:#ccc;
+}
+.rate:not(:checked) > label:before {
+  content: '★ ';
+}
+.rate > input:checked ~ label {
+  color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+  color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+  color: #c59b08;
+}
