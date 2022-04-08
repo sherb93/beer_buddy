@@ -59,13 +59,12 @@ searchBtn.on("click", function(event) {
 
 // Creates a list with the data 
 var listCreator = function(brewInput) {
-    var newBrew = $("<a>").addClass("newBrewery");
+    var newBrew = $("<li>").addClass("newBrewery");
     newBrew.text(brewInput);
     brewList.append(newBrew);
 }
 
 // Count Up
-
 var countBrew = function() {
     var brewCounterString = localStorage.getItem("brewCounter")
     var brewCounter = JSON.parse(brewCounterString)

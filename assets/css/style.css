@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 header{
   display: flex;
   justify-content: space-between;
@@ -65,9 +70,7 @@ header{
 .reviewHeader{
   position:center;
   left: 20%;
-  padding-top: 4em;
 }
-
 
 .usernameCont{
   width:50%;
@@ -80,10 +83,15 @@ header{
 }
 
 #brewList {
-  
-  position:fixed;
-  left:50%;
-  width:400px;
+  float:right;
+  margin-right: 30%;
+}
+
+#brewListTitle{
+  float: right;
+  margin-right: 25%;
+  padding: 10px;
+  background-color: lightgray
 }
 
 .uName {
@@ -98,6 +106,18 @@ header{
   text-align: center;
 }
 
+.displayTabs{
+ margin-left: 50px;
+}
+
+#reviewList{
+  padding:0;
+}
+
+#reviews{
+  margin: 50px;
+  padding: 5px;
+}
 
 #breweries-container{
   margin: 50px 25%;
@@ -127,14 +147,19 @@ header{
   background-color: lightgray
 }
 
-#signinBtn, .newBrewery{
+#signinBtn{
   text-decoration: none;
   color: black;
   border: 1px solid;
   border-color: rgb(118, 118, 118);
   background-color: #EFEFEF;
-  padding: 6px 6px;
+  /* padding: 6px 6px; */
   border-radius: 3px; 
+  font-size: 16px;
+}
+
+.newBrewery{
+  margin: 0;
 }
 
 #map {
@@ -165,19 +190,17 @@ h6{
   border: 1px solid black;
 }
 
-*{
-  margin: 0;
-  padding: 0;
-}
 .rate {
   float: left;
   height: 46px;
   padding: 0 10px;
 }
+
 .rate:not(:checked) > input {
   position:absolute;
   top:-9999px;
 }
+
 .rate:not(:checked) > label {
   float:right;
   width:1em;
@@ -187,16 +210,20 @@ h6{
   font-size:30px;
   color:#ccc;
 }
+
 .rate:not(:checked) > label:before {
   content: '★ ';
 }
+
 .rate > input:checked ~ label {
   color: #ffc700;    
 }
+
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
   color: #deb217;  
 }
+
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
