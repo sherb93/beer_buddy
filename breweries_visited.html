@@ -50,17 +50,23 @@
             </div>
         </section>
 
+        <div id="brewListTitle">List of Breweries Visited:</div>
+        <br>
+        <br>
         <section>
-            <ol id="brewList"></ol>  
+            <ol id="brewList">
+            </ol>  
         </section>
 
-        <!-- Reviews -->
+        <!-- Reviews
         <section>
             <h1 class="reviewHeader">Brewery Reviews</h1>
-        </section>
+        </section> -->
+
         <!-- Star rating -->
-          <section>
-              <ol id="reviewList">
+        <section id="reviews">
+                <h2 class="reviewHeader">Brewery Reviews</h2>
+                <ol id="reviewList">
                 <form>
                     <div class="rate">
                         <input type="radio" id="star5" name="rate" value="5" />
@@ -77,13 +83,17 @@
                     <br><br>
         
                     <label for="bName">Brewery Name:</label>
-                    <input type="text" id="bName" name="bName"><br>
+                    <input type="text" id="bName" name="bName">
+                    <br>
+                    <br>
                     <label for="bReview">Review:</label>
-                    <input type="text" id="bReview" name="bReview"><br>
+                    <input type="text" id="bReview" name="bReview">
+                    <br>
+                    <br>
                     <button type="button" onclick="storeReview()">Submit</button>
                 </form>
               </ol>
-          </section>
+        </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
 </html>
