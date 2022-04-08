@@ -33,8 +33,9 @@ header{
     padding: 20px;
 }
 
-.aboutUsP{
+#aboutUsText{
     text-align: center;
+    margin: 0px 100px;
 }
 
 .image-cards{
@@ -62,13 +63,11 @@ header{
 }
 
 .reviewHeader{
-    padding:10em;
+    position:center;
+    left: 20%;
+    padding-top: 4em;
 }
 
-#fright{
-    display:flex;
-    justify-content:right
-}
 
 .usernameCont{
     width:50%;
@@ -77,10 +76,30 @@ header{
 .newBrewery{
     display:block;
     margin:2em;
+    text-align: center;
 }
+
+ol {
+    position:fixed;
+    left:50%;
+    width:400px;
+}
+
+.uName {
+    border: 1px solid black;
+}
+
+.displayTabs div{
+    width: 200px; 
+    float:left;
+    margin:10px;
+    display: block;
+    text-align: center;
+}
+
   
 #breweries-container{
-    margin:50px;
+    margin: 50px 25%;
 }
 
 .breweryInfo{
@@ -91,7 +110,7 @@ header{
     border: 1px solid black;
 }
 
-.breweryInfo a, p{
+.breweryInfo a, .breweryInfo p{
     color: black;
     line-height: normal;
     margin: 0px;
@@ -107,7 +126,7 @@ header{
     background-color: lightgray
 }
 
-#signinBtn{
+#signinBtn, .newBrewery{
     text-decoration: none;
     color: black;
     border: 1px solid;
@@ -122,36 +141,6 @@ header{
     width: 100%;
     margin-top: 10px;
 }
-
-/* SEARCH PAGE CSS */
-/* 
-#location-search {
-    margin-bottom: 2rem;
-    border-bottom: 2px solid black;
-}
-
-#location-search > * {
-    display: block;
-}
-
-#location-search label {
-    text-align: center;
-    margin-bottom: 1rem;
-    font-weight: 800;
-}
-
-#city, #state {
-    margin-bottom: 0.5rem;
-    width: 100%;
-} */
-
-/* .search-btn {
-    background-color: orange;
-    width: 8rem;
-    margin: 0 auto 1rem;
-    border-radius: 10px;
-    transition: transform 1s;
-} */
 
 #chucknorris{
     text-align: center;
@@ -169,7 +158,7 @@ header{
   color: #666;
   font-weight: 500;
 }
-.container .edit{
+.container .git edit{
   position: absolute;
   right: 10px;
   top: 5px;
@@ -250,3 +239,17 @@ form .btn button{
 form .btn button:hover{
   background: #1b1b1b;
 }
+#displayDadJoke{
+    color: white;
+}
+
+h6{
+    text-align: center;
+    font-size: 10px;
+    margin: 50px;
+}
+
+.count-text{
+    border: 1px solid black;
+}
+

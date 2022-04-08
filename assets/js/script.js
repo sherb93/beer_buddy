@@ -28,10 +28,5 @@ brewList.append(newBrew);
 
 var countBrew = function() {
     brewCounter++;
-    visitCount.text(brewCounter);
+    visitCount.text("Total Visited Breweries: " + brewCounter);
 }
-
-
-
-
-// // // function autofillSearch ()
