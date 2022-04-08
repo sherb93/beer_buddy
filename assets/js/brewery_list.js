@@ -78,7 +78,7 @@ var getLocationValues = function() {
     } else if (stateInput.val().length === 2) {
         var state = convertStateAbbr(stateInput);
     } else if (stateInput.val().length < 2) {
-        alert("Please enter a valid state name or abbreviation");
+        breweriesContainerEl.text("Please enter a valid state name or abbreviation");
         return;
     }
 
@@ -100,7 +100,7 @@ var getBreweries = function (cityValue, stateValue) {
                 initMap(data);
             })
         } else {
-            alert("Error: " + response.status);
+            breweriesContainerEl.text("Error: " + response.status);
         }
     })
 };
@@ -118,7 +118,12 @@ var displayBreweries = function(data) {
     header.addClass("breweries-list-header");
     breweriesContainerEl.append(header);
 
+    // Creates elements to populate data onto the webpage
     for (i = 0; i < data.length; i++) {
+        // Capitalizes strings
+        var capitalize = function(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
         // Create main elements
         var blockEl = $("<div>");
         var infoEl = $("<span>");
@@ -133,7 +138,7 @@ var displayBreweries = function(data) {
         if (data[i].website_url) {
             breweryName.attr("href", data[i].website_url);
         };
-        breweryType.text(`Type: ${data[i].brewery_type}`);
+        breweryType.text(`Type: ${capitalize(data[i].brewery_type)}`);
 
         // Attach left side info
         infoEl.append(breweryName);
@@ -215,7 +220,7 @@ function initMap(data){
       });
     
     setMarkers(map);
-}
+};
 
 
 // Event listener for user inputs
@@ -226,7 +231,7 @@ locationSearch.on("submit", function (event) {
         cityInput.val().toLowerCase();
         getLocationValues();
     } else {
-        alert("Please enter a city and state.");
+        breweriesContainerEl.text("Please enter a city and state.");
     }
 })
 
