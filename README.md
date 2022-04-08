@@ -35,7 +35,8 @@ Below the map, a list of every brewery populates and has a link to their website
 
 # Demo
 
+https://user-images.githubusercontent.com/95831392/162361629-cbb0af1f-199a-46f6-a7b8-a5e9469e2ee0.mp4
 
-Site URL: 
+Site URL: https://sherb93.github.io/beer_buddy/
 
 Thank you for visiting. We hope that Beer Buddy improves the quality of your life and the success of local breweries around the country!
